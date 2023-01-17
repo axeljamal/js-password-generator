@@ -128,6 +128,44 @@ function getPasswordOptions() {
   let addLowerCased = confirm(
     "Click OK to confirm if you would like to add uppercase characters"
   );
+
+  // Loop if user input is outside the parameters
+  while (
+    addUpperCased === false &&
+    addLowerCased === false &&
+    addSpecialChar === false &&
+    addNumericChar === false
+  ) {
+    alert("You must choose at least one parameter");
+    let addSpecialChar = confirm("Click OK to add special characters");
+    let addNumericChar = confirm("Click OK to add numeric characters");
+    let addUpperCased = confirm("Click OK to add lowercase characters");
+    let addLowerCased = confirm("Click OK to add uppercase characters");
+  }
+
+  // Assign an action to the password parameters
+
+  if (lowerCasedChar) {
+    passwordCharacters.push(lowerCasedCharacters);
+  }
+  if (upperCasedChar) {
+    passwordCharacters.push(upperCasedCharacters);
+  }
+  if (specialChar) {
+    passwordCharacters.push(specialCharacters);
+  }
+  if (numericChar) {
+    passwordCharacters.push(numericCharacters);
+  }
+  if (passwordCharacters.length === 0) {
+    alert(
+      "you must select at least one range of characters to generate a password"
+    );
+    getPasswordOptions();
+  } else {
+    generatePassword();
+    passwordCharacters = [];
+  }
 }
 
 // Function for getting a random element from an array
