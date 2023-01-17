@@ -101,6 +101,16 @@ function getPasswordOptions() {
     "Please enter the number between 10 - 64 for the length of the password",
     ""
   );
+
+  passwordLength = parseInt(passwordCharOption, 0);
+
+  // Loop if answer is outside the parameters
+  while (passwordLength <= 10 || passwordLength >= 64) {
+    alert("Password length must be between 10-64 characters Try again");
+    let passwordLength = prompt(
+      "Please enter the number between 10 - 64 for the length of the password"
+    );
+  }
 }
 
 // Function for getting a random element from an array
