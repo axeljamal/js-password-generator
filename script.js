@@ -95,7 +95,13 @@ let passwordCharacters = [];
 let password = "";
 
 // Function to prompt user for password options
-function getPasswordOptions() {}
+function getPasswordOptions() {
+  password = "";
+  let passwordCharOption = prompt(
+    "Please enter the number between 10 - 64 for the length of the password",
+    ""
+  );
+}
 
 // Function for getting a random element from an array
 function getRandom(arr) {}
