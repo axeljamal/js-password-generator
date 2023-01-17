@@ -88,6 +88,12 @@ var upperCasedCharacters = [
   "Z",
 ];
 
+// Variable Declaration
+let passwordText = document.querySelector("#password");
+let userInput = [];
+let passwordCharacters = [];
+let password = "";
+
 // Function to prompt user for password options
 function getPasswordOptions() {}
 
