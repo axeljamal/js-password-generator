@@ -105,7 +105,7 @@ function getPasswordOptions() {
   passwordLength = parseInt(passwordCharOption, 0);
 
   // Loop if answer is outside the parameters
-  while (passwordLength <= 10 || passwordLength >= 64) {
+  while (asswordLength <= 10 || passwordLength >= 64) {
     alert("Password length must be between 10-64 characters Try again");
     let passwordLength = prompt(
       "Please enter the number between 10 - 64 for the length of the password"
@@ -114,6 +114,7 @@ function getPasswordOptions() {
 
   // Confirm the length of characters
   alert(`The length of your password will be ${passwordLength} characters`);
+  userInput.push({ PasswordLength: passwordLength });
 
   // Determine parameters of password
   let addSpecialChar = confirm(
@@ -182,14 +183,12 @@ function generatePassword() {
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  getPasswordOptions();
+  passwordText.textContent = password;
 }
 
 // Add event listener to generate button
