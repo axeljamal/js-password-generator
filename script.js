@@ -111,6 +111,23 @@ function getPasswordOptions() {
       "Please enter the number between 10 - 64 for the length of the password"
     );
   }
+
+  // Confirm the length of characters
+  alert(`The length of your password will be ${passwordLength} characters`);
+
+  // Determine parameters of password
+  let addSpecialChar = confirm(
+    "Click OK to confirm if you would like to add special characters"
+  );
+  let addNumericChar = confirm(
+    "Click OK to confirm if you would like to add numeric characters"
+  );
+  let addUpperCased = confirm(
+    "Click OK to confirm if you would like to add lowercase characters"
+  );
+  let addLowerCased = confirm(
+    "Click OK to confirm if you would like to add uppercase characters"
+  );
 }
 
 // Function for getting a random element from an array
