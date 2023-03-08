@@ -94,7 +94,6 @@ let userInput = [];
 let passwordCharacters = [];
 let password = "";
 
-
 // Function to prompt user for password options
 function getPasswordOptions() {
   password = "";
@@ -141,8 +140,6 @@ function getPasswordOptions() {
     }
 
     // Assign an action to the password parameters
-
-    let passwordCharOption = [];
 
     if (addLowerCased) {
       passwordCharacters.push(lowerCasedCharacters);
