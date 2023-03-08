@@ -89,9 +89,11 @@ var upperCasedCharacters = [
 ];
 
 // Variable Declaration
-var passwordText = document.querySelector("#password");
-var userInput = [];
-var password = "";
+let passwordText = document.querySelector("#password");
+let userInput = [];
+let passwordCharacters = [];
+let password = "";
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -140,7 +142,7 @@ function getPasswordOptions() {
 
     // Assign an action to the password parameters
 
-    let passwordCharacters = [];
+    let passwordCharOption = [];
 
     if (addLowerCased) {
       passwordCharacters.push(lowerCasedCharacters);
@@ -158,7 +160,7 @@ function getPasswordOptions() {
       alert(
         "you must select at least one range of characters to generate a password"
       );
-      getPasswordOptions();
+      getPasswordCharacters();
     } else {
       generatePassword();
       passwordCharacters = [];
