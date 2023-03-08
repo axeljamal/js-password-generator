@@ -15,7 +15,7 @@
   
   ## Demonstration
   ### Deployed Link:
-      https://axeljamal.github.io/js-password-generator/
+    https://axeljamal.github.io/js-password-generator/
 
   ![screencapture-axeljamal-github-io-js-password-generator-2023-03-08-13_01_11](https://user-images.githubusercontent.com/119621308/223720649-57519794-3a22-41cc-8fba-6c0c52312c23.png)
 
